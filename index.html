@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDAK - Transforma Tu Potencial</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        reda: {
+                            black: '#121212',
+                            purple: '#663399',
+                            purpleGlow: '#8a2be2',
+                            silver: '#c0c0c0',
+                            gray: '#1e1e1e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans antialiased text-white selection:bg-reda-purple selection:text-white">
+
+    <!-- Sticky Header -->
+    <header
+        class="fixed w-full top-0 z-50 glassmorphism shadow-lg border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3 md:py-6 relative">
+                <!-- Left Nav (Desktop) -->
+                <nav class="hidden md:flex space-x-8 flex-1 justify-end pr-8 lg:pr-12">
+                    <a href="#hero"
+                        class="text-sm font-semibold tracking-wider hover:text-reda-purple transition-colors uppercase">Inicio</a>
+                    <a href="#about"
+                        class="text-sm font-semibold tracking-wider hover:text-reda-purple transition-colors uppercase">¿Quiénes
+                        somos?</a>
+                </nav>
+
+                <!-- Center Logo -->
+                <div class="flex-shrink-0 flex items-center justify-center">
+                    <a href="#" class="flex flex-col items-center group">
+                        <img src="IMG/logo.png" alt="REDAK Logo"
+                            class="h-10 md:h-20 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300">
+                    </a>
+                </div>
+
+                <!-- Right Nav (Desktop) -->
+                <nav class="hidden md:flex space-x-8 items-center flex-1 justify-start pl-8 lg:pl-12">
+                    <a href="#planes"
+                        class="text-sm font-semibold tracking-wider hover:text-reda-purple transition-colors uppercase">Planes</a>
+                    <a href="#contact"
+                        class="text-sm font-semibold tracking-wider hover:text-reda-purple transition-colors uppercase">Contacto</a>
+                    <a href="#"
+                        class="px-5 py-2 text-sm font-bold bg-reda-purple rounded-sm hover:bg-reda-purpleGlow neon-glow transition-all uppercase tracking-wider">Accede</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center absolute right-0 top-1/2 -translate-y-1/2">
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()"
+                        class="text-white hover:text-reda-purple focus:outline-none p-2 mr-2">
+                        <i class="fa-solid fa-bars text-2xl drop-shadow-md"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu"
+            class="md:hidden absolute top-full left-0 w-full bg-reda-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all duration-300 max-h-0 overflow-hidden opacity-0 flex flex-col">
+            <a href="#hero" onclick="toggleMobileMenu()"
+                class="block px-8 py-4 text-sm font-bold uppercase tracking-widest border-b border-white/5 hover:text-reda-purple transition-colors">Inicio</a>
+            <a href="#about" onclick="toggleMobileMenu()"
+                class="block px-8 py-4 text-sm font-bold uppercase tracking-widest border-b border-white/5 hover:text-reda-purple transition-colors">¿Quiénes
+                Somos?</a>
+            <a href="#planes" onclick="toggleMobileMenu()"
+                class="block px-8 py-4 text-sm font-bold uppercase tracking-widest border-b border-white/5 hover:text-reda-purple transition-colors">Planes</a>
+            <a href="#contact" onclick="toggleMobileMenu()"
+                class="block px-8 py-4 text-sm font-bold uppercase tracking-widest border-b border-white/5 hover:text-reda-purple transition-colors">Contacto</a>
+            <div class="p-8 pt-4">
+                <a href="#"
+                    class="block w-full text-center py-4 text-sm font-bold bg-reda-purple rounded-sm neon-glow uppercase tracking-wider text-white">Accede</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden bg-reda-black">
+        <!-- Imagen Principal de Intro -->
+        <!-- NOTA: Guarda la imagen proporcionada en la carpeta IMG con el nombre 'intro.jpg' -->
+        <div class="absolute inset-0 bg-[url('IMG/intro.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        <!-- Flecha sutil para scroll a la derecha (UX/UI) -->
+        <a href="#specialists"
+            class="absolute bottom-8 right-8 md:bottom-12 md:right-12 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm z-20 group drop-shadow-md">
+            <i class="fa-solid fa-chevron-down group-hover:translate-y-1 transition-transform"></i>
+        </a>
+    </section>
+
+    <!-- Specialists Section -->
+    <section id="specialists" class="py-24 bg-reda-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-heading font-black text-center mb-16 uppercase tracking-wider"><span
+                    class="text-reda-purple">El Equipo</span> REDAK</h2>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Specialist 1: Rebeca -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('rebeca')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rebeca"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Rebeca</h3>
+                    <p class="text-sm text-reda-silver text-center">Salud Femenina y Biomecánica</p>
+                </div>
+                <!-- Specialist 2: David -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('david')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">David</h3>
+                    <p class="text-sm text-reda-silver text-center">Fuerza e Hipertrofia</p>
+                </div>
+                <!-- Specialist 3: Ángel -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('angel')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ángel"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Ángel</h3>
+                    <p class="text-sm text-reda-silver text-center">Preparación de Atletas</p>
+                </div>
+                <!-- Specialist 4: Egoitz -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('egoitz')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Egoitz"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Egoitz</h3>
+                    <p class="text-sm text-reda-silver text-center">Especialista Core Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Mission Section -->
+    <section id="about" class="py-24 bg-reda-gray relative border-t border-b border-white/5 overflow-hidden">
+        <!-- Background Overlay -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1469&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] grayscale pointer-events-none">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-reda-gray via-transparent to-reda-gray pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Left Column -->
+                <div
+                    class="glassmorphism p-8 rounded-xl relative overflow-hidden group hover:border-reda-purple/50 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-reda-purple"></div>
+                    <h3 class="text-2xl font-heading font-black mb-4 uppercase text-reda-purple">¿Qué es REDAK?</h3>
+                    <p class="text-reda-silver leading-relaxed">Una empresa de asesoramiento deportivo enfocada en el
+                        desarrollo progresivo. Ofrecemos programas de entrenamiento, salud y mejora física adaptados al
+                        individuo. Luchamos frontalmente contra el sedentarismo y las rutinas "copy-paste" que solo
+                        llevan a lesiones o frustración. Nos centramos en la adherencia y en el control técnico
+                        exhaustivo.</p>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                    class="glassmorphism p-8 rounded-xl relative overflow-hidden group hover:border-reda-purple/50 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-white"></div>
+                    <h3 class="text-2xl font-heading font-black mb-4 uppercase">Identidad & Valores</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><i class="fa-solid fa-leaf text-reda-purple mt-1 mr-3"></i><span
+                                class="text-sm text-reda-silver"><strong class="text-white">100% Drug-Free:</strong>
+                                Progreso absolutamente natural.</span></li>
+                        <li class="flex items-start"><i
+                                class="fa-solid fa-heart-pulse text-reda-purple mt-1 mr-3"></i><span
+                                class="text-sm text-reda-silver"><strong class="text-white">Salud primero:</strong> Cero
+                                métodos extremos ni metas de riesgo.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-unlock text-reda-purple mt-1 mr-3"></i><span
+                                class="text-sm text-reda-silver"><strong class="text-white">Accesibilidad:</strong>
+                                Entrenar no es un lujo, es para todos.</span></li>
+                        <li class="flex items-start"><i
+                                class="fa-solid fa-bullseye text-reda-purple mt-1 mr-3"></i><span
+                                class="text-sm text-reda-silver"><strong class="text-white">Bienestar realista:</strong>
+                                Foco en la viabilidad constante y a largo plazo.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap / Fases Section -->
+    <section id="roadmap" class="py-24 bg-reda-black relative border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-reda-purple font-bold tracking-widest uppercase text-sm mb-2 block">Nuestro
+                    Horizonte</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-black uppercase tracking-wider">El Camino <span
+                        class="text-white">REDAK</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fase 1 (Interactive) -->
+                <div onclick="openFaseModal()"
+                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border-2 border-reda-purple bg-reda-purple/10 relative cursor-pointer group shadow-[0_0_20px_rgba(102,51,153,0.15)] hover:shadow-[0_0_35px_rgba(102,51,153,0.4)] flex flex-col h-full">
+
+                    <div
+                        class="absolute -top-3 left-8 bg-reda-purple text-white text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full shadow-[0_0_10px_rgba(102,51,153,0.5)] z-10">
+                        Fase 1 (Actual)</div>
+
+                    <div class="mt-4 flex-grow">
+                        <h3
+                            class="text-2xl font-bold mb-3 uppercase text-white group-hover:text-reda-purple transition-colors">
+                            Asesoramiento Online</h3>
+                        <p class="text-sm text-reda-silver mb-4 leading-relaxed">
+                            Rendimiento y estética. Planes hiper-personalizados enfocados en progreso real y sostenible.
+                        </p>
+                        <div class="mb-6 flex items-start border-l-2 border-reda-purple pl-3">
+                            <i class="fa-solid fa-venus text-reda-purple mt-1 mr-2 text-sm"></i>
+                            <span class="text-xs text-reda-silver leading-relaxed"><strong class="text-white">Esp.
+                                    Mujer:</strong> Biomecánica adaptada y control hormonal.</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <span
+                            class="inline-block py-2 border-b-2 border-transparent group-hover:border-reda-purple text-reda-purple font-bold uppercase tracking-widest text-xs transition-colors">
+                            Ver Detalles y Sesión <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div
+                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border border-white/10 hover:border-white/30 opacity-90 hover:opacity-100 relative group flex flex-col h-full">
+                    <!-- Background Image Overlay -->
+                    <div
+                        class="absolute inset-0 rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:opacity-25 transition-opacity grayscale mix-blend-luminosity">
+                    </div>
+                    <div
+                        class="absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-t from-reda-black via-reda-black/80 to-transparent">
+                    </div>
+
+                    <div
+                        class="absolute -top-3 left-8 bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-full backdrop-blur-md shadow-md z-10">
+                        Fase 2 (Próximamente)</div>
+
+                    <div class="relative z-10 mt-4 flex-grow">
+                        <h3
+                            class="text-2xl font-bold mb-3 uppercase text-white group-hover:text-reda-purple transition-colors">
+                            REDAK <span class="text-reda-purple">Center</span></h3>
+                        <p class="text-sm text-white/70 mb-6 leading-relaxed">
+                            Nuestro gimnasio físico y cuartel general. Instalaciones de alta gama con enfoque absoluto
+                            en salud y rendimiento.
+                        </p>
+
+                        <ul class="space-y-2.5 mb-6">
+                            <li class="flex items-center text-xs text-white/80"><i
+                                    class="fa-solid fa-dumbbell text-reda-purple w-5"></i> Musculación Biomecánica</li>
+                            <li class="flex items-center text-xs text-white/80"><i
+                                    class="fa-solid fa-users text-reda-purple w-5"></i> Clases Inmersivas</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative z-10 w-full mt-auto">
+                        <div class="flex justify-between items-end mb-2">
+                            <span class="text-[10px] uppercase font-bold text-white/50 tracking-widest">En
+                                desarrollo</span>
+                            <span class="text-xs font-bold text-reda-purple text-glow">35%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                            <div
+                                class="bg-reda-purple h-1.5 rounded-full shadow-[0_0_10px_rgba(102,51,153,0.8)] w-[35%] transition-all duration-1000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div
+                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border border-white/10 hover:border-white/20 opacity-80 hover:opacity-100 relative group flex flex-col h-full">
+                    <!-- Background Image Overlay -->
+                    <div
+                        class="absolute inset-0 rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop')] bg-cover bg-center opacity-5 group-hover:opacity-15 transition-opacity grayscale mix-blend-luminosity">
+                    </div>
+                    <div
+                        class="absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-t from-reda-black via-reda-black/90 to-transparent">
+                    </div>
+
+                    <div
+                        class="absolute -top-3 left-8 bg-white/5 border border-white/5 text-white/70 text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-full backdrop-blur-md shadow-md z-10">
+                        Fase 3 (Futuro)</div>
+
+                    <div class="relative z-10 mt-4 flex-grow">
+                        <h3
+                            class="text-2xl font-bold mb-3 uppercase text-white/90 group-hover:text-white transition-opacity">
+                            GYM ÑAM <i class="fa-solid fa-utensils text-reda-purple/50 ml-1"></i></h3>
+                        <p class="text-sm text-white/60 mb-6 leading-relaxed">
+                            El fit-restaurant del futuro. Gastronomía real orientada a resultados tangibles y conteo
+                            milimétrico de macros.
+                        </p>
+
+                        <ul class="space-y-2.5 mb-6">
+                            <li class="flex items-center text-xs text-white/50"><i
+                                    class="fa-solid fa-leaf text-white/20 w-5"></i> Gastronomía Gourmet Pura</li>
+                            <li class="flex items-center text-xs text-white/50"><i
+                                    class="fa-solid fa-box text-white/20 w-5"></i> Meal Prep Automatizado</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative z-10 w-full mt-auto">
+                        <div class="flex justify-between items-end mb-2">
+                            <span
+                                class="text-[10px] uppercase font-bold text-white/40 tracking-widest">Planificación</span>
+                            <span class="text-xs font-bold text-white/40">10%</span>
+                        </div>
+                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                            <div class="bg-white/20 h-1.5 rounded-full w-[10%] transition-all duration-1000"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Carousel Grid (3x2) -->
+    <section id="grid" class="py-24 bg-reda-gray border-b border-white/5 relative overflow-hidden">
+        <!-- Intense Texture Backdrop -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.05] grayscale mix-blend-luminosity pointer-events-none">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-reda-gray via-transparent to-reda-gray pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-reda-purple font-bold tracking-widest uppercase text-sm mb-2 block">Nuestra Forma de
+                    Ver la Vida</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-black uppercase tracking-wider">Los 6 <span
+                        class="text-reda-purple">Mandamientos</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Mandamiento 1 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-fire text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">
+                        Compromiso Innegociable</h3>
+                    <p class="text-sm text-reda-silver text-center">El talento suma, pero la pura disciplina multiplica.
+                        Sin constancia no hay transformación real.</p>
+                </div>
+                <!-- Mandamiento 2 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-seedling text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">
+                        Combustible Real</h3>
+                    <p class="text-sm text-reda-silver text-center">Tratamos tu cuerpo como una máquina de precisión. Tu
+                        energía depende estrictamente de lo que le das.</p>
+                </div>
+                <!-- Mandamiento 3 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-brain text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">Mente
+                        de Acero</h3>
+                    <p class="text-sm text-reda-silver text-center">La resiliencia se entrena tanto como el músculo. El
+                        cuerpo llega únicamente hasta donde la mente le permita.</p>
+                </div>
+                <!-- Mandamiento 4 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-bed-pulse text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">
+                        Inversión en Pausa</h3>
+                    <p class="text-sm text-reda-silver text-center">Invertir en recuperar es invertir en crecer. Sin un
+                        reinicio verdaderamente estructurado, te quemarás.</p>
+                </div>
+                <!-- Mandamiento 5 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-users text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">
+                        Sentido de Manada</h3>
+                    <p class="text-sm text-reda-silver text-center">No caminamos solos. Celebramos cada progreso y nos
+                        apoyamos mutuamente cuando el camino se endurece.</p>
+                </div>
+                <!-- Mandamiento 6 -->
+                <div
+                    class="glassmorphism rounded-xl p-8 flex flex-col items-center justify-center group hover:-translate-y-2 transition-all cursor-pointer border border-white/5 hover:border-reda-purple/50 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-reda-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <i
+                        class="fa-solid fa-compass text-4xl mb-4 text-reda-purple group-hover:scale-110 transition-transform drop-shadow-md"></i>
+                    <h3 class="font-bold text-lg md:text-xl uppercase tracking-widest text-white mb-2 text-center">
+                        Propósito Eterno</h3>
+                    <p class="text-sm text-reda-silver text-center">No buscamos la estética temporal. Construimos poder,
+                        resistencia y salud de acero que duren toda la vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes y Servicios Section -->
+    <section id="planes" class="py-24 bg-reda-gray border-t border-white/5 relative scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-reda-purple font-bold tracking-widest uppercase text-sm mb-2 block">Caminos de
+                    Crecimiento</span>
+                <h2 class="text-3xl md:text-5xl font-heading font-black uppercase tracking-wider">Planes & <span
+                        class="text-reda-purple">Servicios</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div
+                    class="glassmorphism rounded-2xl p-8 flex flex-col border border-white/10 hover:border-reda-purple/40 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-black font-heading uppercase text-white mb-2">Básica</h3>
+                    <p class="text-reda-silver text-sm mb-6 h-10">Ideal para mantener constancia y tener seguimiento
+                        profesional.</p>
+                    <div class="text-4xl font-black text-white mb-6">€79<span
+                            class="text-lg text-reda-silver font-normal">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Acceso total a la App</li>
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Seguimiento online semanal</li>
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-plus text-white/50 mr-3"></i>Add-on Nutricional (Opcional)</li>
+                        <li class="flex items-center text-sm text-gray-500 line-through"><i
+                                class="fa-solid fa-xmark mr-3"></i>Sesiones presenciales</li>
+                    </ul>
+                    <a href="#contact"
+                        class="w-full text-center py-3 border border-white/20 rounded font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">Seleccionar</a>
+                </div>
+
+                <!-- Pro Plan (Highlighted) -->
+                <div
+                    class="bg-reda-black border-2 border-reda-purple rounded-2xl p-8 flex flex-col relative shadow-[0_0_30px_rgba(102,51,153,0.3)] z-10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="absolute -top-3 left-8 bg-reda-purple text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full">
+                        Más Elegido</div>
+                    <h3 class="text-2xl font-black font-heading uppercase text-white mb-2 mt-2">Premium</h3>
+                    <p class="text-reda-silver text-sm mb-6 h-10">Modalidad mixta: Lo mejor de ambos mundos.</p>
+                    <div class="text-5xl font-black text-white mb-6 drop-shadow-md">€149<span
+                            class="text-lg text-reda-silver font-normal">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-sm text-white"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>1 Sesión Presencial al mes</li>
+                        <li class="flex items-center text-sm text-white"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Acceso y Rutinas App</li>
+                        <li class="flex items-center text-sm text-white"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Nutrición básica incluída</li>
+                        <li class="flex items-center text-sm text-white"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Soporte WhatsApp L-V</li>
+                    </ul>
+                    <a href="#contact"
+                        class="w-full text-center py-3 bg-reda-purple rounded font-bold uppercase tracking-widest text-sm hover:bg-reda-purpleGlow transition-colors neon-glow">Seleccionar</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div
+                    class="glassmorphism rounded-2xl p-8 flex flex-col border border-white/10 hover:border-reda-purple/40 transition-all duration-300 transform hover:-translate-y-2">
+                    <h3 class="text-xl font-black font-heading uppercase text-white mb-2">Deluxe</h3>
+                    <p class="text-reda-silver text-sm mb-6 h-10">Entrenamiento personal y gestión exhaustiva al 100%.
+                    </p>
+                    <div class="text-4xl font-black text-white mb-6">€399<span
+                            class="text-lg text-reda-silver font-normal">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Gestión Total por tu entrenador</li>
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>2-3 Sesiones Presenciales / sem</li>
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Coaching Nutricional Full</li>
+                        <li class="flex items-center text-sm text-gray-300"><i
+                                class="fa-solid fa-check text-reda-purple mr-3"></i>Acceso a todo el ecosistema</li>
+                    </ul>
+                    <a href="#contact"
+                        class="w-full text-center py-3 border border-white/20 rounded font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">Seleccionar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-reda-black border-t border-white/5 relative overflow-hidden">
+        <!-- Dark Gym Background -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-[0.05] mix-blend-luminosity pointer-events-none grayscale">
+        </div>
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-reda-black via-reda-black/80 to-reda-black pointer-events-none">
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="glassmorphism rounded-2xl p-8 md:p-12 border border-reda-purple/20 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-reda-purple/20 rounded-full blur-3xl -mr-16 -mt-16">
+                </div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-reda-purple/10 rounded-full blur-3xl -ml-16 -mb-16">
+                </div>
+
+                <h2
+                    class="text-3xl md:text-4xl font-heading font-black text-center mb-2 uppercase tracking-wider relative z-10">
+                    Da el <span class="text-reda-purple">Primer Paso</span></h2>
+                <p class="text-center text-reda-silver mb-8 relative z-10">Rellena el formulario para dar el primer paso
+                    de tu transformación.</p>
+
+                <form class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name"
+                                class="block text-sm font-medium text-reda-silver mb-2 uppercase tracking-wide">Nombre</label>
+                            <input type="text" id="name"
+                                class="w-full bg-reda-black/50 border border-white/10 rounded-none px-4 py-3 text-white focus:outline-none focus:border-reda-purple focus:ring-1 focus:ring-reda-purple transition-colors"
+                                placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email"
+                                class="block text-sm font-medium text-reda-silver mb-2 uppercase tracking-wide">Email</label>
+                            <input type="email" id="email"
+                                class="w-full bg-reda-black/50 border border-white/10 rounded-none px-4 py-3 text-white focus:outline-none focus:border-reda-purple focus:ring-1 focus:ring-reda-purple transition-colors"
+                                placeholder="tu@email.com">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="coach"
+                                class="block text-sm font-medium text-reda-silver mb-2 uppercase tracking-wide">Especialista
+                                (Opcional)</label>
+                            <select id="coach" onchange="updateGoals()"
+                                class="w-full bg-reda-black/50 border border-white/10 rounded-none px-4 py-3 text-white focus:outline-none focus:border-reda-purple focus:ring-1 focus:ring-reda-purple transition-colors appearance-none cursor-pointer"
+                                style="background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'6 9 12 15 18 9\'/></svg>'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em;">
+                                <option value="" class="bg-reda-gray">Sin preferencia / Asignar equipo</option>
+                                <option value="rebeca" class="bg-reda-gray">Rebeca (Salud Mujer / Biomecánica)</option>
+                                <option value="david" class="bg-reda-gray">David (Rendimiento / Fuerza)</option>
+                                <option value="angel" class="bg-reda-gray">Ángel (Preparación Élite)</option>
+                                <option value="egoitz" class="bg-reda-gray">Egoitz (Core / Hábitos)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="goal"
+                                class="block text-sm font-medium text-reda-silver mb-2 uppercase tracking-wide">Tu
+                                Objetivo Principal</label>
+                            <select id="goal"
+                                class="w-full bg-reda-black/50 border border-white/10 rounded-none px-4 py-3 text-white focus:outline-none focus:border-reda-purple focus:ring-1 focus:ring-reda-purple transition-colors appearance-none cursor-pointer"
+                                style="background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><polyline points=\'6 9 12 15 18 9\'/></svg>'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em;">
+                                <option value="" class="bg-reda-gray">Selecciona tu meta</option>
+                                <option value="estetica" class="bg-reda-gray">Mejora y Composición Corporal</option>
+                                <option value="salud" class="bg-reda-gray">Salud Hormonal y Entrenamiento Femenino
+                                </option>
+                                <option value="competicion" class="bg-reda-gray">Competición y Alto Rendimiento</option>
+                                <option value="habitos" class="bg-reda-gray">Empezar a entrenar / Fuerza base</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message"
+                            class="block text-sm font-medium text-reda-silver mb-2 uppercase tracking-wide">Mensaje</label>
+                        <textarea id="message" rows="4"
+                            class="w-full bg-reda-black/50 border border-white/10 rounded-none px-4 py-3 text-white focus:outline-none focus:border-reda-purple focus:ring-1 focus:ring-reda-purple transition-colors resize-none"
+                            placeholder="Cuéntanos sobre tus objetivos..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-transparent border-2 border-reda-purple text-white font-bold py-4 uppercase tracking-widest hover:bg-reda-purple hover:text-white transition-all duration-300 neon-glow text-lg mt-2">
+                        Solicitar Asesoramiento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section (Warm & Vibrant) -->
+    <section class="py-24 relative overflow-hidden flex items-center justify-center border-t border-white/5">
+        <!-- Warm Human Background Backdrop -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-luminosity">
+        </div>
+        <!-- Warm vibrant overlay -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-reda-purple/80 via-reda-black/90 to-orange-600/30 mix-blend-multiply">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-reda-black via-transparent to-reda-black"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+            <h3
+                class="text-3xl md:text-4xl font-heading font-black uppercase text-white mb-4 tracking-widest drop-shadow-lg">
+                La Familia <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-reda-purple">REDAK</span>
+            </h3>
+            <p class="text-sm text-white/80 max-w-lg mx-auto mb-12 leading-relaxed">No es solo entrenamiento. Comparte
+                tus logros, motívate con el equipo y vive nuestro día a día más cercano y humano.</p>
+
+            <div class="flex flex-wrap justify-center gap-8 md:gap-14">
+                <!-- Instagram (Vibrant) -->
+                <a href="#" class="group flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-3xl flex items-center justify-center text-white bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 transition-all duration-300 transform group-hover:-translate-y-2 group-hover:scale-105 shadow-[0_10px_30px_rgba(236,72,153,0.4)] group-hover:shadow-[0_15px_40px_rgba(236,72,153,0.7)]">
+                        <i class="fa-brands fa-instagram text-4xl md:text-5xl drop-shadow-md"></i>
+                    </div>
+                    <span
+                        class="mt-4 text-xs uppercase tracking-widest font-bold text-white/90 group-hover:text-pink-400 transition-colors">Instagram</span>
+                </a>
+
+                <!-- Facebook (Vibrant) -->
+                <a href="#" class="group flex flex-col items-center">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-3xl flex items-center justify-center text-white bg-gradient-to-br from-[#1877F2] to-[#0d5ebd] transition-all duration-300 transform group-hover:-translate-y-2 group-hover:scale-105 shadow-[0_10px_30px_rgba(24,119,242,0.4)] group-hover:shadow-[0_15px_40px_rgba(24,119,242,0.7)]">
+                        <i class="fa-brands fa-facebook-f text-4xl md:text-5xl drop-shadow-md"></i>
+                    </div>
+                    <span
+                        class="mt-4 text-xs uppercase tracking-widest font-bold text-white/90 group-hover:text-[#1877F2] transition-colors">Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-white/10">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity">
+                <img src="IMG/logo.png" alt="REDAK Logo" class="h-12 md:h-16 w-auto object-contain transition-all">
+            </div>
+
+            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest text-center mt-2 md:mt-0">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> REDAK. Todos los derechos reservados.
+            </p>
+
+            <div class="flex space-x-6 mt-2 md:mt-0">
+                <a href="#"
+                    class="text-[10px] text-gray-600 hover:text-white tracking-widest uppercase transition-colors">Aviso
+                    Legal</a>
+                <a href="#"
+                    class="text-[10px] text-gray-600 hover:text-white tracking-widest uppercase transition-colors">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling Utility -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Sticky header background transition
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-reda-black/80');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-reda-black/80');
+                header.classList.add('bg-transparent');
+            }
+        });
+    </script>
+    <!-- Specialist Modal -->
+    <div id="specialistModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-reda-black/80 backdrop-blur-md" onclick="closeModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative bg-reda-gray border border-reda-purple/40 rounded-2xl p-6 md:p-8 max-w-2xl w-full mx-4 shadow-[0_0_40px_rgba(102,51,153,0.3)] glassmorphism transform scale-95 transition-all duration-300"
+            id="modalContent">
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors text-2xl z-10 p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start relative z-10">
+                <!-- Left: Profile -->
+                <div class="flex flex-col items-center w-full md:w-1/3 flex-shrink-0">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-reda-purple shadow-[0_0_15px_rgba(102,51,153,0.5)] mb-4 p-1 neon-glow">
+                        <img id="modalImg" src="" alt="Specialist" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <h3 id="modalName" class="font-bold text-2xl text-white text-center tracking-wide">Name</h3>
+                    <p id="modalRole"
+                        class="text-xs text-reda-purple font-semibold text-center mt-1 uppercase tracking-widest">Role
+                    </p>
+                </div>
+
+                <!-- Right: Info & Form -->
+                <div class="w-full md:w-2/3">
+                    <div class="mb-6 space-y-3">
+                        <div class="bg-white/5 border border-white/10 rounded-lg p-4 relative overflow-hidden group">
+                            <div class="absolute left-0 top-0 w-1 h-full bg-reda-purple"></div>
+                            <h5
+                                class="text-xs text-reda-purple font-bold uppercase tracking-widest mb-1 flex items-center">
+                                <i class="fa-solid fa-crosshairs mr-2"></i>¿Qué hace?
+                            </h5>
+                            <p id="modalTasks" class="text-sm text-reda-silver leading-relaxed">Tasks placeholder.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-lg p-4 relative overflow-hidden group">
+                            <div class="absolute left-0 top-0 w-1 h-full bg-white"></div>
+                            <h5
+                                class="text-xs text-white/70 font-bold uppercase tracking-widest mb-1 flex items-center">
+                                <i class="fa-solid fa-bullseye mr-2"></i>Objetivo
+                            </h5>
+                            <p id="modalObjective" class="text-sm text-reda-silver leading-relaxed">Objective
+                                placeholder.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-6 border-t border-white/5">
+                        <h4
+                            class="font-heading text-sm text-white/70 mb-4 uppercase tracking-widest text-center md:text-left">
+                            ¿Listo para transformarte?
+                        </h4>
+                        <button onclick="selectCoachAndScroll()"
+                            class="w-full border-2 border-reda-purple bg-reda-purple/10 text-white py-4 rounded font-bold uppercase tracking-wider text-sm hover:bg-reda-purple hover:text-white transition-all duration-300 neon-glow shadow-[0_0_20px_rgba(102,51,153,0.2)]">
+                            Trabajar Conmigo <i class="fa-solid fa-arrow-down ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fase 1 Video Modal -->
+    <div id="faseModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+        <!-- Backdrop: Lighter so they see the website clearly -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeFaseModal()"></div>
+
+        <!-- Modal Content: Subtle Frame -->
+        <div class="relative bg-reda-gray border flex flex-col p-3 md:p-4 border-white/10 rounded-xl max-w-3xl w-full mx-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform scale-95 transition-all duration-300"
+            id="faseModalContent">
+
+            <!-- Close Button -->
+            <button onclick="closeFaseModal()"
+                class="absolute top-2 right-2 text-white/40 hover:text-white transition-colors text-xl w-8 h-8 flex items-center justify-center rounded-full z-20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Inner Marco / Frame (Subtle) -->
+            <div class="border border-white/5 rounded-lg p-4 md:p-6 flex flex-col gap-5 bg-white/[0.02]">
+                <div class="text-center mt-1">
+                    <span class="text-reda-purple font-bold tracking-widest uppercase text-[10px] mb-1 block">Sesión
+                        Exclusiva</span>
+                    <h3 class="text-2xl font-heading font-black text-white uppercase">Asesoramiento <span
+                            class="text-reda-purple">Online</span></h3>
+                    <p class="text-reda-silver text-xs mt-2 max-w-lg mx-auto leading-relaxed">Descubre cómo trabajamos
+                        desde dentro con control técnico exhaustivo y aplicación biomecánica al rendimiento.</p>
+                </div>
+
+                <!-- Video Placeholder -->
+                <div
+                    class="w-full aspect-video bg-reda-black rounded-lg overflow-hidden relative group flex items-center justify-center shadow-inner border border-white/10 transition-colors">
+                    <!-- Cuando suban el video, se reemplaza aquí -->
+                    <div
+                        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-luminosity">
+                    </div>
+
+                    <button
+                        class="w-16 h-16 rounded-full bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-white text-xl z-10 hover:bg-white/20 hover:scale-110 transition-all">
+                        <i class="fa-solid fa-play ml-1 text-white/90"></i>
+                    </button>
+
+                    <div
+                        class="absolute bottom-3 left-3 z-10 bg-black/50 backdrop-blur px-2 py-1 rounded text-[10px] font-bold tracking-widest text-white/70 border border-white/5 uppercase">
+                        <i class="fa-solid fa-video text-reda-purple mr-1"></i> Archivo de Video
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 mt-1">
+                    <a href="#contact" onclick="closeFaseModal()"
+                        class="flex-1 text-center py-3 bg-reda-purple/90 border border-reda-purple rounded font-bold uppercase tracking-widest text-[11px] hover:bg-reda-purple transition-colors text-white">Comenzar
+                        Proyecto</a>
+                    <button onclick="closeFaseModal()"
+                        class="flex-1 text-center py-3 border border-white/10 rounded font-bold uppercase tracking-widest text-[11px] hover:bg-white/5 transition-colors text-white/70 hover:text-white">Cerrar
+                        Visor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -158,3 +158,15 @@ function closeFaseModal() {
     content.classList.remove('scale-100');
     content.classList.add('scale-95');
 }
+
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu.classList.contains('max-h-0')) {
+        mobileMenu.classList.remove('max-h-0', 'opacity-0');
+        mobileMenu.classList.add('max-h-[500px]', 'opacity-100');
+    } else {
+        mobileMenu.classList.add('max-h-0', 'opacity-0');
+        mobileMenu.classList.remove('max-h-[500px]', 'opacity-100');
+    }
+}
+

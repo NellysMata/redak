@@ -42,7 +42,7 @@
     <header
         class="fixed w-full top-0 z-50 glassmorphism shadow-lg border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 md:py-6 relative">
+            <div class="flex justify-between items-center py-2 md:py-4 relative">
                 <!-- Left Nav (Desktop) -->
                 <nav class="hidden md:flex space-x-8 flex-1 justify-end pr-8 lg:pr-12">
                     <a href="#hero"
@@ -56,7 +56,7 @@
                 <div class="flex-shrink-0 flex items-center justify-center">
                     <a href="#" class="flex flex-col items-center group">
                         <img src="IMG/logo.png" alt="REDAK Logo"
-                            class="h-10 md:h-20 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300">
+                            class="h-14 md:h-20 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300">
                     </a>
                 </div>
 
@@ -100,25 +100,33 @@
     </header>
 
     <!-- Hero Banner -->
-    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden bg-reda-black">
-        <!-- Imagen Principal de Intro -->
-        <!-- NOTA: Guarda la imagen proporcionada en la carpeta IMG con el nombre 'intro.jpg' -->
-        <div class="absolute inset-0 bg-[url('IMG/intro.jpg')] bg-cover bg-center bg-no-repeat"></div>
-        <!-- Flecha sutil para scroll a la derecha (UX/UI) -->
+    <section id="hero"
+        class="relative w-full flex flex-col items-center justify-start bg-reda-black md:h-screen overflow-hidden">
+
+        <!-- Banner Edge-to-Edge Centrado (ampliado 160% en movil para buen balance) -->
+        <img src="IMG/intro.jpg" alt="Transforma Tu Potencial - REDAK"
+            class="w-[160%] max-w-none h-auto md:w-full md:max-w-full md:h-full md:object-cover md:object-center block">
+
+        <!-- Marco / Fundido inferior muy fino para no ocultar texto del slogan -->
+        <div
+            class="absolute bottom-[-2px] left-0 w-full h-12 md:h-32 bg-gradient-to-t from-reda-black to-transparent pointer-events-none">
+        </div>
+
+        <!-- Flecha sutil para scroll a la derecha -->
         <a href="#specialists"
-            class="absolute bottom-8 right-8 md:bottom-12 md:right-12 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm z-20 group drop-shadow-md">
+            class="absolute bottom-6 right-6 md:bottom-12 md:right-12 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/60 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm z-20 group drop-shadow-md bg-black/20">
             <i class="fa-solid fa-chevron-down group-hover:translate-y-1 transition-transform"></i>
         </a>
     </section>
 
     <!-- Specialists Section -->
-    <section id="specialists" class="py-24 bg-reda-black relative">
+    <section id="specialists" class="py-16 md:py-24 bg-reda-black relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl md:text-4xl font-heading font-black text-center mb-16 uppercase tracking-wider"><span
                     class="text-reda-purple">El Equipo</span> REDAK</h2>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Specialist 1: Rebeca -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Specialist 1: Rebeca (R) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('rebeca')">
                     <div
                         class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
@@ -128,27 +136,7 @@
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Rebeca</h3>
                     <p class="text-sm text-reda-silver text-center">Salud Femenina y Biomecánica</p>
                 </div>
-                <!-- Specialist 2: David -->
-                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('david')">
-                    <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David"
-                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
-                    </div>
-                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">David</h3>
-                    <p class="text-sm text-reda-silver text-center">Fuerza e Hipertrofia</p>
-                </div>
-                <!-- Specialist 3: Ángel -->
-                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('angel')">
-                    <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ángel"
-                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
-                    </div>
-                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Ángel</h3>
-                    <p class="text-sm text-reda-silver text-center">Preparación de Atletas</p>
-                </div>
-                <!-- Specialist 4: Egoitz -->
+                <!-- Specialist 2: Egoitz (E) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('egoitz')">
                     <div
                         class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
@@ -158,12 +146,32 @@
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Egoitz</h3>
                     <p class="text-sm text-reda-silver text-center">Especialista Core Team</p>
                 </div>
+                <!-- Specialist 3: David (D) -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('david')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">David</h3>
+                    <p class="text-sm text-reda-silver text-center">Fuerza e Hipertrofia</p>
+                </div>
+                <!-- Specialist 4: Ángel (A) -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('angel')">
+                    <div
+                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ángel"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Ángel</h3>
+                    <p class="text-sm text-reda-silver text-center">Preparación de Atletas</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About/Mission Section -->
-    <section id="about" class="py-24 bg-reda-gray relative border-t border-b border-white/5 overflow-hidden">
+    <section id="about" class="py-16 md:py-24 bg-reda-gray relative border-t border-b border-white/5 overflow-hidden">
         <!-- Background Overlay -->
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1469&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] grayscale pointer-events-none">
@@ -172,7 +180,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
                 <!-- Left Column -->
                 <div
                     class="glassmorphism p-8 rounded-xl relative overflow-hidden group hover:border-reda-purple/50 transition-colors">
@@ -212,7 +220,7 @@
     </section>
 
     <!-- Roadmap / Fases Section -->
-    <section id="roadmap" class="py-24 bg-reda-black relative border-b border-white/5">
+    <section id="roadmap" class="py-16 md:py-24 bg-reda-black relative border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-reda-purple font-bold tracking-widest uppercase text-sm mb-2 block">Nuestro
@@ -221,7 +229,7 @@
                         class="text-white">REDAK</span></h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Fase 1 (Interactive) -->
                 <div onclick="openFaseModal()"
                     class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border-2 border-reda-purple bg-reda-purple/10 relative cursor-pointer group shadow-[0_0_20px_rgba(102,51,153,0.15)] hover:shadow-[0_0_35px_rgba(102,51,153,0.4)] flex flex-col h-full">
@@ -346,7 +354,7 @@
     </section>
 
     <!-- Photo Carousel Grid (3x2) -->
-    <section id="grid" class="py-24 bg-reda-gray border-b border-white/5 relative overflow-hidden">
+    <section id="grid" class="py-16 md:py-24 bg-reda-gray border-b border-white/5 relative overflow-hidden">
         <!-- Intense Texture Backdrop -->
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-fixed bg-center opacity-[0.05] grayscale mix-blend-luminosity pointer-events-none">
@@ -446,7 +454,7 @@
     </section>
 
     <!-- Planes y Servicios Section -->
-    <section id="planes" class="py-24 bg-reda-gray border-t border-white/5 relative scroll-mt-24">
+    <section id="planes" class="py-16 md:py-24 bg-reda-gray border-t border-white/5 relative scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-reda-purple font-bold tracking-widest uppercase text-sm mb-2 block">Caminos de
@@ -455,7 +463,7 @@
                         class="text-reda-purple">Servicios</span></h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Basic Plan -->
                 <div
                     class="glassmorphism rounded-2xl p-8 flex flex-col border border-white/10 hover:border-reda-purple/40 transition-all duration-300 transform hover:-translate-y-2">
@@ -528,7 +536,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact" class="py-24 bg-reda-black border-t border-white/5 relative overflow-hidden">
+    <section id="contact" class="py-16 md:py-24 bg-reda-black border-t border-white/5 relative overflow-hidden">
         <!-- Dark Gym Background -->
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-[0.05] mix-blend-luminosity pointer-events-none grayscale">
@@ -616,7 +624,7 @@
     </section>
 
     <!-- Social Media Section (Warm & Vibrant) -->
-    <section class="py-24 relative overflow-hidden flex items-center justify-center border-t border-white/5">
+    <section class="py-16 md:py-24 relative overflow-hidden flex items-center justify-center border-t border-white/5">
         <!-- Warm Human Background Backdrop -->
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-luminosity">

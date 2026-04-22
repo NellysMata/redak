@@ -125,12 +125,12 @@
             <h2 class="text-3xl md:text-4xl font-heading font-black text-center mb-16 uppercase tracking-wider"><span
                     class="text-reda-purple">El Equipo</span> REDAK</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 justify-items-center">
                 <!-- Specialist 1: Rebeca (R) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('rebeca')">
                     <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rebeca"
+                        class="w-40 h-40 md:w-44 md:h-44 flex-shrink-0 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="IMG/rebeca.jpg" alt="Rebeca"
                             class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
                     </div>
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Rebeca</h3>
@@ -139,8 +139,8 @@
                 <!-- Specialist 2: Egoitz (E) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('egoitz')">
                     <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Egoitz"
+                        class="w-40 h-40 md:w-44 md:h-44 flex-shrink-0 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="IMG/egoitz.jpg" alt="Egoitz"
                             class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
                     </div>
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Egoitz</h3>
@@ -149,8 +149,8 @@
                 <!-- Specialist 3: David (D) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('david')">
                     <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David"
+                        class="w-40 h-40 md:w-44 md:h-44 flex-shrink-0 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="IMG/david.jpg" alt="David"
                             class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
                     </div>
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">David</h3>
@@ -159,12 +159,22 @@
                 <!-- Specialist 4: Ángel (A) -->
                 <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('angel')">
                     <div
-                        class="w-32 h-32 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
-                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ángel"
+                        class="w-40 h-40 md:w-44 md:h-44 flex-shrink-0 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="IMG/angel.jpg" alt="Ángel"
                             class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
                     </div>
                     <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Ángel</h3>
                     <p class="text-sm text-reda-silver text-center">Preparación de Atletas</p>
+                </div>
+                <!-- Specialist 5: Gorka -->
+                <div class="flex flex-col items-center group cursor-pointer" onclick="openModal('gorka')">
+                    <div
+                        class="w-40 h-40 md:w-44 md:h-44 flex-shrink-0 rounded-full overflow-hidden border-2 border-transparent group-hover:border-reda-purple transition-all duration-300 neon-glow mb-4 p-1">
+                        <img src="IMG/gorka.jpg" alt="Gorka"
+                            class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all">
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-reda-purple transition-colors">Gorka</h3>
+                    <p class="text-sm text-reda-silver text-center">Jugador + Entrenador</p>
                 </div>
             </div>
         </div>
@@ -229,123 +239,128 @@
                         class="text-white">REDAK</span></h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 min-[940px]:grid-cols-3 gap-6 min-[940px]:gap-8 w-full max-w-full max-[939px]:max-w-[450px] mx-auto transition-all duration-500">
                 <!-- Fase 1 (Interactive) -->
                 <div onclick="openFaseModal()"
-                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border-2 border-reda-purple bg-reda-purple/10 relative cursor-pointer group shadow-[0_0_20px_rgba(102,51,153,0.15)] hover:shadow-[0_0_35px_rgba(102,51,153,0.4)] flex flex-col h-full">
-
-                    <div
-                        class="absolute -top-3 left-8 bg-reda-purple text-white text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full shadow-[0_0_10px_rgba(102,51,153,0.5)] z-10">
-                        Fase 1 (Actual)</div>
-
-                    <div class="mt-4 flex-grow">
-                        <h3
-                            class="text-2xl font-bold mb-3 uppercase text-white group-hover:text-reda-purple transition-colors">
-                            Asesoramiento Online</h3>
-                        <p class="text-sm text-reda-silver mb-4 leading-relaxed">
-                            Rendimiento y estética. Planes hiper-personalizados enfocados en progreso real y sostenible.
-                        </p>
-                        <div class="mb-6 flex items-start border-l-2 border-reda-purple pl-3">
-                            <i class="fa-solid fa-venus text-reda-purple mt-1 mr-2 text-sm"></i>
-                            <span class="text-xs text-reda-silver leading-relaxed"><strong class="text-white">Esp.
-                                    Mujer:</strong> Biomecánica adaptada y control hormonal.</span>
-                        </div>
+                    class="relative group h-full cursor-pointer hover:-translate-y-3 transition-transform duration-500 scale-100">
+                    
+                    <!-- Background & Border Wrapper -->
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden glassmorphism bg-gradient-to-b from-reda-purple/5 to-transparent border border-reda-purple/50 group-hover:border-reda-purple transition-all duration-500 shadow-[0_8px_30px_rgba(102,51,153,0.15)] group-hover:shadow-[0_15px_40px_rgba(102,51,153,0.4)]">
+                        <div class="absolute -top-16 -right-16 w-32 h-32 bg-reda-purple/20 blur-3xl rounded-full group-hover:bg-reda-purple/40 transition-colors duration-500 pointer-events-none"></div>
                     </div>
 
-                    <div class="w-full">
-                        <span
-                            class="inline-block py-2 border-b-2 border-transparent group-hover:border-reda-purple text-reda-purple font-bold uppercase tracking-widest text-xs transition-colors">
-                            Ver Detalles y Sesión <i class="fa-solid fa-arrow-right ml-1"></i>
-                        </span>
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -top-3 left-6 min-[940px]:left-8 bg-gradient-to-r from-reda-purple to-reda-purpleGlow text-white text-[10px] min-[940px]:text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full shadow-[0_0_15px_rgba(138,43,226,0.6)] z-20 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-fire mr-1"></i> Fase 1 (Actual)</div>
+
+                    <!-- Card Content -->
+                    <div class="relative z-10 p-6 min-[940px]:p-8 pb-8 min-[940px]:pb-10 flex flex-col h-full pt-8 min-[940px]:pt-10">
+                        <div class="flex-grow">
+                            <h3 class="text-xl min-[940px]:text-2xl font-black font-heading mb-3 uppercase text-white group-hover:text-reda-purple transition-colors drop-shadow-md break-words">Asesoramiento Online</h3>
+                            <p class="text-[13px] min-[940px]:text-sm text-reda-silver mb-5 leading-relaxed">
+                                Rendimiento y estética pura. Planes hiper-personalizados enfocados en el progreso real, erradicando rutinas genéricas.
+                            </p>
+                            <div class="mb-6 flex items-start border-l-2 border-reda-purple pl-4 bg-gradient-to-r from-reda-purple/10 to-transparent py-2 group-hover:from-reda-purple/20 transition-colors rounded-r-md">
+                                <i class="fa-solid fa-venus text-reda-purple mt-1 mr-3 text-sm flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <span class="text-[11px] min-[940px]:text-xs text-reda-silver leading-relaxed"><strong class="text-white">Foco Femenino:</strong> Biomecánica impecable y sincronización hormonal.</span>
+                            </div>
+                        </div>
+
+                        <div class="w-full pt-4 border-t border-white/10 group-hover:border-reda-purple/30 transition-colors mt-auto">
+                            <span class="flex items-center justify-between text-reda-purple font-bold uppercase tracking-widest text-[10px] min-[940px]:text-xs group-hover:text-white transition-colors">
+                                <span>Ver Detalles</span>
+                                <span class="w-8 h-8 rounded-full bg-reda-purple/10 flex items-center justify-center flex-shrink-0 group-hover:bg-reda-purple transition-colors ml-2"><i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Fase 2 -->
-                <div
-                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border border-white/10 hover:border-white/30 opacity-90 hover:opacity-100 relative group flex flex-col h-full">
+                <div class="relative group h-full hover:-translate-y-3 transition-transform duration-500">
+                    
                     <!-- Background Image Overlay -->
-                    <div
-                        class="absolute inset-0 rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:opacity-25 transition-opacity grayscale mix-blend-luminosity">
-                    </div>
-                    <div
-                        class="absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-t from-reda-black via-reda-black/80 to-transparent">
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden glassmorphism bg-reda-black border border-white/5 group-hover:border-reda-purple/40 transition-all duration-500 shadow-lg group-hover:shadow-[0_15px_35px_rgba(102,51,153,0.15)] opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center opacity-[0.08] group-hover:opacity-20 transition-opacity duration-700 grayscale mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-reda-black via-reda-black/80 to-transparent"></div>
                     </div>
 
-                    <div
-                        class="absolute -top-3 left-8 bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-full backdrop-blur-md shadow-md z-10">
-                        Fase 2 (Próximamente)</div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -top-3 left-6 min-[940px]:left-8 bg-white/5 text-white/80 border border-white/10 text-[10px] min-[940px]:text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full backdrop-blur-md shadow-lg z-20 group-hover:bg-white/10 transition-colors">
+                        <i class="fa-solid fa-screwdriver-wrench text-reda-purple mr-1"></i> Fase 2</div>
 
-                    <div class="relative z-10 mt-4 flex-grow">
-                        <h3
-                            class="text-2xl font-bold mb-3 uppercase text-white group-hover:text-reda-purple transition-colors">
-                            REDAK <span class="text-reda-purple">Center</span></h3>
-                        <p class="text-sm text-white/70 mb-6 leading-relaxed">
-                            Nuestro gimnasio físico y cuartel general. Instalaciones de alta gama con enfoque absoluto
-                            en salud y rendimiento.
-                        </p>
+                    <!-- Content -->
+                    <div class="relative z-10 p-6 min-[940px]:p-8 pb-8 min-[940px]:pb-10 flex flex-col h-full pt-8 min-[940px]:pt-10">
+                        <div class="flex-grow">
+                            <h3 class="text-xl min-[940px]:text-2xl font-black font-heading mb-3 uppercase text-white group-hover:text-reda-purple transition-colors drop-shadow-md break-words">
+                                REDAK <span class="text-reda-purple/70">Center</span></h3>
+                            <p class="text-[13px] min-[940px]:text-sm text-white/50 group-hover:text-white/70 transition-colors mb-6 leading-relaxed">
+                                El futuro cuartel general. Instalaciones de alta gama con un enfoque técnico absoluto sobre hierro y sudor.
+                            </p>
 
-                        <ul class="space-y-2.5 mb-6">
-                            <li class="flex items-center text-xs text-white/80"><i
-                                    class="fa-solid fa-dumbbell text-reda-purple w-5"></i> Musculación Biomecánica</li>
-                            <li class="flex items-center text-xs text-white/80"><i
-                                    class="fa-solid fa-users text-reda-purple w-5"></i> Clases Inmersivas</li>
-                        </ul>
-                    </div>
-
-                    <div class="relative z-10 w-full mt-auto">
-                        <div class="flex justify-between items-end mb-2">
-                            <span class="text-[10px] uppercase font-bold text-white/50 tracking-widest">En
-                                desarrollo</span>
-                            <span class="text-xs font-bold text-reda-purple text-glow">35%</span>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center text-[11px] min-[940px]:text-xs text-white/70 group-hover:text-white/90 transition-colors bg-white/5 rounded-md p-2 border border-white/5">
+                                    <span class="w-8 flex justify-center text-reda-purple flex-shrink-0"><i class="fa-solid fa-dumbbell"></i></span>
+                                    <span>Musculación Biomecánica</span>
+                                </div>
+                                <div class="flex items-center text-[11px] min-[940px]:text-xs text-white/70 group-hover:text-white/90 transition-colors bg-white/5 rounded-md p-2 border border-white/5">
+                                    <span class="w-8 flex justify-center text-reda-purple flex-shrink-0"><i class="fa-solid fa-bolt"></i></span>
+                                    <span>Maquinaria Elite</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
-                            <div
-                                class="bg-reda-purple h-1.5 rounded-full shadow-[0_0_10px_rgba(102,51,153,0.8)] w-[35%] transition-all duration-1000">
+
+                        <div class="w-full mt-auto">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-[9px] min-[940px]:text-[10px] uppercase font-bold text-white/40 tracking-widest group-hover:text-white/60 transition-colors">Progreso</span>
+                                <span class="text-xs min-[940px]:text-sm font-black text-reda-purple shadow-sm">35%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2 overflow-hidden shadow-inner flex">
+                                <div class="bg-gradient-to-r from-reda-purple/50 to-reda-purple h-full rounded-full shadow-[0_0_10px_rgba(102,51,153,0.8)] w-[35%] group-hover:w-[40%] transition-all duration-1000 ease-out relative"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fase 3 -->
-                <div
-                    class="p-8 pb-10 glassmorphism rounded-xl hover:-translate-y-2 transition-all border border-white/10 hover:border-white/20 opacity-80 hover:opacity-100 relative group flex flex-col h-full">
+                <div class="relative group h-full hover:-translate-y-3 transition-transform duration-500">
+                    
                     <!-- Background Image Overlay -->
-                    <div
-                        class="absolute inset-0 rounded-xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop')] bg-cover bg-center opacity-5 group-hover:opacity-15 transition-opacity grayscale mix-blend-luminosity">
-                    </div>
-                    <div
-                        class="absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-t from-reda-black via-reda-black/90 to-transparent">
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden glassmorphism bg-reda-gray border border-white/5 group-hover:border-white/20 transition-all duration-500 shadow-md group-hover:shadow-xl opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1453&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700 grayscale mix-blend-luminosity"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-reda-gray via-reda-gray/90 to-transparent"></div>
                     </div>
 
-                    <div
-                        class="absolute -top-3 left-8 bg-white/5 border border-white/5 text-white/70 text-[10px] font-bold uppercase tracking-widest py-1.5 px-3 rounded-full backdrop-blur-md shadow-md z-10">
-                        Fase 3 (Futuro)</div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -top-3 left-6 min-[940px]:left-8 bg-white/5 text-white/50 border border-white/5 text-[10px] min-[940px]:text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full backdrop-blur-md z-20">
+                        <i class="fa-solid fa-clock mr-1"></i> Fase 3</div>
 
-                    <div class="relative z-10 mt-4 flex-grow">
-                        <h3
-                            class="text-2xl font-bold mb-3 uppercase text-white/90 group-hover:text-white transition-opacity">
-                            GYM ÑAM <i class="fa-solid fa-utensils text-reda-purple/50 ml-1"></i></h3>
-                        <p class="text-sm text-white/60 mb-6 leading-relaxed">
-                            El fit-restaurant del futuro. Gastronomía real orientada a resultados tangibles y conteo
-                            milimétrico de macros.
-                        </p>
+                    <!-- Content -->
+                    <div class="relative z-10 p-6 min-[940px]:p-8 pb-8 min-[940px]:pb-10 flex flex-col h-full pt-8 min-[940px]:pt-10">
+                        <div class="flex-grow">
+                            <h3 class="text-xl min-[940px]:text-2xl font-black font-heading mb-3 uppercase text-white/70 group-hover:text-white transition-colors break-words">GYM ÑAM</h3>
+                            <p class="text-[13px] min-[940px]:text-sm text-white/40 group-hover:text-white/60 transition-colors mb-6 leading-relaxed">
+                                Restaurante enfocado en macros. Nutrición matemática convertida en gastronomía gourmet, directo para el músculo.
+                            </p>
 
-                        <ul class="space-y-2.5 mb-6">
-                            <li class="flex items-center text-xs text-white/50"><i
-                                    class="fa-solid fa-leaf text-white/20 w-5"></i> Gastronomía Gourmet Pura</li>
-                            <li class="flex items-center text-xs text-white/50"><i
-                                    class="fa-solid fa-box text-white/20 w-5"></i> Meal Prep Automatizado</li>
-                        </ul>
-                    </div>
-
-                    <div class="relative z-10 w-full mt-auto">
-                        <div class="flex justify-between items-end mb-2">
-                            <span
-                                class="text-[10px] uppercase font-bold text-white/40 tracking-widest">Planificación</span>
-                            <span class="text-xs font-bold text-white/40">10%</span>
+                            <div class="space-y-3 mb-6 opacity-60 group-hover:opacity-100 transition-opacity">
+                                <div class="flex items-center text-[11px] min-[940px]:text-xs text-white/60 border-l-2 border-white/10 pl-3">
+                                    <i class="fa-solid fa-leaf text-white/30 mr-3 flex-shrink-0"></i> Menús Puros y Transparentes
+                                </div>
+                                <div class="flex items-center text-[11px] min-[940px]:text-xs text-white/60 border-l-2 border-white/10 pl-3">
+                                    <i class="fa-solid fa-box-open text-white/30 mr-3 flex-shrink-0"></i> Meal Prep Automatizado
+                                </div>
+                            </div>
                         </div>
-                        <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
-                            <div class="bg-white/20 h-1.5 rounded-full w-[10%] transition-all duration-1000"></div>
+
+                        <div class="w-full mt-auto">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-[9px] min-[940px]:text-[10px] uppercase font-bold text-white/30 tracking-widest">En Concepto</span>
+                                <span class="text-[10px] min-[940px]:text-xs font-black text-white/40">10%</span>
+                            </div>
+                            <div class="w-full bg-black/50 rounded-full h-1.5 overflow-hidden flex">
+                                <div class="bg-white/20 h-full rounded-full w-[10%] group-hover:w-[12%] transition-all duration-1000 ease-out"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -467,11 +482,15 @@
                 <!-- Basic Plan -->
                 <div
                     class="glassmorphism rounded-2xl p-8 flex flex-col border border-white/10 hover:border-reda-purple/40 transition-all duration-300 transform hover:-translate-y-2">
-                    <h3 class="text-xl font-black font-heading uppercase text-white mb-2">Básica</h3>
-                    <p class="text-reda-silver text-sm mb-6 h-10">Ideal para mantener constancia y tener seguimiento
-                        profesional.</p>
-                    <div class="text-4xl font-black text-white mb-6">€79<span
+                    <h3 class="text-xl font-black font-heading uppercase text-white mb-2">Básico</h3>
+                    
+                    <div class="text-4xl font-black text-white mb-4">150€<span
                             class="text-lg text-reda-silver font-normal">/mes</span></div>
+                            
+                    <div class="bg-white/5 border-l-2 border-reda-purple p-3 mb-6 rounded-r-md">
+                        <p class="text-[11px] lg:text-xs text-reda-silver leading-relaxed"><strong class="text-white">Deducción de Fidelidad:</strong> Al 4º mes de trabajo con el monitor la tarifa se reducirá a <strong class="text-white">100€</strong>. Conforme pasen los meses, se descontará un porcentaje progresivo hasta la cantidad deseada.</p>
+                    </div>
+
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex items-center text-sm text-gray-300"><i
                                 class="fa-solid fa-check text-reda-purple mr-3"></i>Acceso total a la App</li>
@@ -486,16 +505,21 @@
                         class="w-full text-center py-3 border border-white/20 rounded font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-colors">Seleccionar</a>
                 </div>
 
-                <!-- Pro Plan (Highlighted) -->
+                <!-- Premium Plan (Highlighted) -->
                 <div
                     class="bg-reda-black border-2 border-reda-purple rounded-2xl p-8 flex flex-col relative shadow-[0_0_30px_rgba(102,51,153,0.3)] z-10 transition-all duration-300 hover:-translate-y-2">
                     <div
                         class="absolute -top-3 left-8 bg-reda-purple text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full">
                         Más Elegido</div>
                     <h3 class="text-2xl font-black font-heading uppercase text-white mb-2 mt-2">Premium</h3>
-                    <p class="text-reda-silver text-sm mb-6 h-10">Modalidad mixta: Lo mejor de ambos mundos.</p>
-                    <div class="text-5xl font-black text-white mb-6 drop-shadow-md">€149<span
+                    
+                    <div class="text-5xl font-black text-white mb-4 drop-shadow-md">220€<span
                             class="text-lg text-reda-silver font-normal">/mes</span></div>
+                            
+                    <div class="bg-white/5 border-l-2 border-white/50 p-3 mb-6 rounded-r-md">
+                        <p class="text-[11px] lg:text-xs text-white/80 leading-relaxed"><strong class="text-white">Deducción de Fidelidad:</strong> Al 4º mes de trabajo la tarifa se reducirá a <strong class="text-white">165€</strong>, manteniendo la misma modalidad de descuentos por permanencia.</p>
+                    </div>
+
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex items-center text-sm text-white"><i
                                 class="fa-solid fa-check text-reda-purple mr-3"></i>1 Sesión Presencial al mes</li>
@@ -510,14 +534,18 @@
                         class="w-full text-center py-3 bg-reda-purple rounded font-bold uppercase tracking-widest text-sm hover:bg-reda-purpleGlow transition-colors neon-glow">Seleccionar</a>
                 </div>
 
-                <!-- Premium Plan -->
+                <!-- Deluxe Plan -->
                 <div
                     class="glassmorphism rounded-2xl p-8 flex flex-col border border-white/10 hover:border-reda-purple/40 transition-all duration-300 transform hover:-translate-y-2">
                     <h3 class="text-xl font-black font-heading uppercase text-white mb-2">Deluxe</h3>
-                    <p class="text-reda-silver text-sm mb-6 h-10">Entrenamiento personal y gestión exhaustiva al 100%.
-                    </p>
-                    <div class="text-4xl font-black text-white mb-6">€399<span
+                    
+                    <div class="text-4xl font-black text-white mb-4">280€<span
                             class="text-lg text-reda-silver font-normal">/mes</span></div>
+                            
+                    <div class="bg-white/5 border-l-2 border-reda-purple/50 p-3 mb-6 rounded-r-md">
+                        <p class="text-[11px] lg:text-xs text-reda-silver leading-relaxed opacity-80"><strong class="text-white">Condición Especial:</strong> Esta cuota no es apta para deducciones automáticas por tiempo, a menos que el entrenador lo vea necesario.</p>
+                    </div>
+
                     <ul class="space-y-4 mb-8 flex-grow">
                         <li class="flex items-center text-sm text-gray-300"><i
                                 class="fa-solid fa-check text-reda-purple mr-3"></i>Gestión Total por tu entrenador</li>
@@ -589,6 +617,7 @@
                                 <option value="david" class="bg-reda-gray">David (Rendimiento / Fuerza)</option>
                                 <option value="angel" class="bg-reda-gray">Ángel (Preparación Élite)</option>
                                 <option value="egoitz" class="bg-reda-gray">Egoitz (Core / Hábitos)</option>
+                                <option value="gorka" class="bg-reda-gray">Gorka (Jugador + Entrenador Personal)</option>
                             </select>
                         </div>
                         <div>

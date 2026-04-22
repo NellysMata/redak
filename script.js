@@ -2,30 +2,37 @@ const specialistsData = {
     rebeca: {
         name: "Rebeca",
         role: "Salud Femenina y Biomecánica",
-        img: "https://randomuser.me/api/portraits/women/44.jpg",
+        img: "IMG/rebeca.jpg",
         tasks: "Especialista en entrenamiento de la mujer, salud hormonal (fases y pre/post-menopausia) y nutrición de rendimiento.",
         objective: "Adaptar el entrenamiento y la nutrición a la fisiología femenina para garantizar funcionalidad y bienestar real."
     },
     david: {
         name: "David",
         role: "Rendimiento y Fuerza",
-        img: "https://randomuser.me/api/portraits/men/32.jpg",
+        img: "IMG/david.jpg",
         tasks: "Diseño y planificación de programas enfocados en el rendimiento deportivo, fuerza bruta e hipertrofia.",
         objective: "Llevar la composición corporal al nivel de competición garantizando siempre la máxima salud posible."
     },
     angel: {
         name: "Ángel",
         role: "Preparación de Atletas",
-        img: "https://randomuser.me/api/portraits/men/46.jpg",
+        img: "IMG/angel.jpg",
         tasks: "Preparación de atletas de alto nivel priorizando resultados reales y aplicables mediante control técnico exhaustivo.",
         objective: "Generar constancia para alcanzar el pico físico y mantener viabilidad sostenible a largo plazo."
     },
     egoitz: {
         name: "Egoitz",
         role: "Especialista Core",
-        img: "https://randomuser.me/api/portraits/men/22.jpg",
+        img: "IMG/egoitz.jpg",
         tasks: "Foco en el progreso natural (Drug-Free) y el desarrollo de la resistencia cardiovascular y adherencia a la rutina.",
         objective: "Erradicar las rutinas genéricas copy-paste y asegurar un desarrollo personal robusto paso a paso."
+    },
+    gorka: {
+        name: "Gorka",
+        role: "Jugador + Entrenador Personal",
+        img: "IMG/gorka.jpg",
+        tasks: "Especializado en rendimiento deportivo mediante un seguimiento real y metódico.",
+        objective: "Mejorar tu físico y rendimiento a través de un método propio adaptado."
     }
 };
 
@@ -60,6 +67,12 @@ const goalsBySpecialist = {
         { val: "core", text: "Desarrollo del Core y Resistencia" },
         { val: "habitos", text: "Adherencia y Erradicar Sedentarismo" },
         { val: "progresonatural", text: "Progreso 100% Natural (Drug-Free)" }
+    ],
+    "gorka": [
+        { val: "", text: "Selecciona el objetivo con Gorka" },
+        { val: "rendimiento", text: "Mejora del Rendimiento Deportivo" },
+        { val: "fisico", text: "Transformación y Mejora Física" },
+        { val: "metodo", text: "Seguimiento Real y Método Propio" }
     ]
 };
 
